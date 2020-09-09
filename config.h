@@ -17,6 +17,10 @@
 #define PHONE_OK 0x40
 #define ADDRESS_OK 0x80
 
+//权限
+#define USER 0
+#define ROOT 1
+
 //命令
 typedef enum{
     Register = 1,   //注册
@@ -29,6 +33,7 @@ typedef enum{
 typedef struct {
    cmd_e cmd;           //命令类型
    int id;             //编号（帐号4位）
+   char permission;		//权限
    char name[20];       //名字
    char passwd[20];     //密码
    char sex[10];        //性别
